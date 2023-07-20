@@ -31,6 +31,16 @@
 ## 贡献者
 
 <!-- readme: collaborators,contributors -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/hilinxinhui">
+            <img src="https://avatars.githubusercontent.com/u/72953081?v=4" width="100;" alt="hilinxinhui"/>
+            <br />
+            <sub><b>Xinhui Lin</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: collaborators,contributors -end -->
 
 ## 许可
