@@ -1,0 +1,97 @@
+\documentclass[10pt,aspectratio=43,mathserif]{beamer}		
+%设置为 Beamer 文档类型，设置字体为 10pt，长宽比为16:9，数学字体为 serif 风格
+
+%%%%-----导入宏包-----%%%%
+\usepackage{neu}
+\usepackage{xeCJK}
+\usepackage{amsmath,amsfonts,amssymb,bm}
+\usepackage{color}
+\usepackage{graphicx,hyperref,url}	
+%%%%%%%%%%%%%%%%%%
+
+\definecolor{neu_blue}{RGB}{42,69,140}
+
+%%%%-----设置字体-----%%%%
+%Windows和Mac OS下都可用
+\setsansfont[Path=fonts/]{Helvetica}
+
+%\setsansfont{Times New Roman}
+
+%仅Windows可用
+%\setCJKmainfont{Hiragino Sans GB W3}
+
+%仅Mac OS下可用
+%\setCJKmainfont{Songti SC}
+
+%设置 Beamer 主题
+\beamertemplateballitem
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{\textbf{目录}}
+    \textbf{\tableofcontents[currentsection]}
+  \end{frame}
+}
+
+%%%%----首页信息设置----%%%%
+\title[NEU Beamer Theme]{\fontsize{13pt}{18pt}\selectfont {NEU Beamer Theme}}
+\subtitle{\fontsize{9pt}{14pt}\selectfont \textbf{利用Beamer制作幻灯片}}			
+%%%%----标题设置
+
+\author[林新辉]{
+  林新辉, author1, author2, \\
+  author3 and author4 \\\medskip
+  {\small {hilinxinhui@gmail.com}} \\
+  {\small {\{author1, author2\}@ncepu.edu.cn}} \\
+  {\small {\{author3, author4\}@neu.edu.cn}}}
+%%%%----个人信息设置
+
+\institute[<lab>]{
+  lab (lab) \\
+  Northeastern University}
+%%%%----机构信息
+
+\date[\today]{
+ \today}
+%%%%----日期信息
+
+\begin{document}
+
+% 标题页
+\begin{frame}
+\titlepage
+\end{frame}
+
+% 目录页
+\section*{目录}
+\begin{frame}
+    \frametitle{\textbf{目录}}
+		\textbf{\tableofcontents}
+\end{frame}
+
+\section{引言}
+\begin{frame}
+\end{frame}
+
+\section{系统}
+\begin{frame}
+\end{frame}
+
+\section{方法}
+\begin{frame}
+\end{frame}
+
+\section{分析}
+\begin{frame}
+\end{frame}
+
+\section{结论}
+\begin{frame}
+\end{frame}
+
+\section*{}
+\begin{frame}
+\end{frame}
+
+\end{document}
