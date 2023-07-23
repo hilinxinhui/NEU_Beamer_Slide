@@ -26,8 +26,8 @@ PowerPoint简单易用，有直观的交互和所见即所得的设计，但是�
 克隆本项目，[修改相关代码](#usage)即可。
 
 ```Shell
-$ cd /path/to/clone
-$ git clone https://github.com/hilinxinhui/NEU_Beamer_Slide.git
+cd /path/to/clone
+git clone https://github.com/hilinxinhui/NEU_Beamer_Slide.git
 ```
 
 ### Usage
@@ -47,7 +47,7 @@ $ git clone https://github.com/hilinxinhui/NEU_Beamer_Slide.git
 
 - 样式依据[SEU-Beamer-Slide](https://github.com/TouchFishPioneer/SEU-Beamer-Slide)改编，感谢原作者的设计
 - [NEU-Beamer-Slide](https://github.com/zhouyanasd/NEU-Beamer-Slide)提供了校徽矢量图等各种资源文件
-- 内容编排参考[THU-Beamer-Theme ](https://github.com/tuna/THU-Beamer-Theme)
+- 内容编排参考[THU-Beamer-Theme](https://github.com/tuna/THU-Beamer-Theme)
 
 ## Maintainer
 
