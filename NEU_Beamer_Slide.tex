@@ -15,34 +15,29 @@
 
 %%%%-----设置字体-----%%%%
 %Windows和Mac OS下都可用
-\setsansfont[Path=fonts/]{Helvetica}
+% \setsansfont[Path=fonts/]{Helvetica}
 
-%\setsansfont{Times New Roman}
+\setsansfont{Times New Roman}
+\setCJKmainfont{Songti SC}
 
-%仅Windows可用
-%\setCJKmainfont{Hiragino Sans GB W3}
-
-%仅Mac OS下可用
-%\setCJKmainfont{Songti SC}
-
-%设置 Beamer 主题
 \beamertemplateballitem
-
-% \AtBeginSection[]
-% {
-%   \begin{frame}<beamer>
-%     \frametitle{\textbf{目录}}
-%     \textbf{\tableofcontents[currentsection]}
-%   \end{frame}
-% }
-
-% defs
 \def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
 \def\env#1{\texttt{\color{blue}\footnotesize #1}}
 \definecolor{deepblue}{rgb}{0,0,0.5}
 \definecolor{deepred}{rgb}{0.6,0,0}
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 \definecolor{halfgray}{gray}{0.55}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=red,
+    citecolor=blue
+}
+
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{./ref.bib} %BibTeX数据文件及位置
+\setbeamerfont{footnote}{size=\tiny} %调整注脚的文字大小
 
 \lstset{
     basicstyle=\ttfamily\small,
@@ -56,24 +51,11 @@
 }
 
 %%%%----首页信息设置----%%%%
-\title[NEU Beamer Theme]{\fontsize{13pt}{18pt}\selectfont {NEU Beamer Theme}}
-\subtitle{\fontsize{9pt}{14pt}\selectfont \textbf{利用Beamer制作幻灯片}}			
+\title[汇报]{\fontsize{13pt}{18pt}\selectfont {汇报}}
 %%%%----标题设置
 
-\author[林新辉]{
-  林新辉 \\\medskip
-  {\small {hilinxinhui@gmail.com}}}
-  % \author[R. Song]{
-  % Bradley Reaves, Nolen Scaife, Dave Tian, Logan Blue, \\
-  % Patrick Traynor and Kevin R.B. Butler \\\medskip
-  % {\small {\{reaves, scaife, daveti, bluel\}@ufl.edu}} \\
-  % {\small {\{traynor, butler\}@cise.ufl.edu}}}
+\author[林新辉]{林新辉 \\\medskip}
 %%%%----个人信息设置
-
-\institute[<lab>]{
-  School of Computer Science and Engineering \\
-  Northeastern University, China}
-%%%%----机构信息
 
 \date[\today]{
  \today}
@@ -93,241 +75,74 @@
   \textbf{\tableofcontents}
 \end{frame}
 
-\section{研究背景}
-\begin{frame}{用Beamer很高大上？}
-  % \begin{itemize}[<+-| alert@+>] % 当然，除了alert，手动在里面插 \pause 也行
-  \begin{itemize}
-    \item 大家都会\LaTeX{}，NEU也有了自己的Beamer主题！
-    \item 中文内容请使用 Xe\LaTeX{} 编译
-    \item 即将上传Overleaf，敬请期待
-          % \item Overleaf项目地址位于 \url{}，可以直接使用
-    \item 本项目已开源，GitHub仓库见 \\ \url{https://github.com/hilinxinhui/NEU_Beamer_Slide} \\ 欢迎Star、Fork，欢迎提交Issues和PRs
-  \end{itemize}
-\end{frame}
+\section{文献阅读}
 
-\section{研究现状}
-
-\subsection*{Beamer}
-
-\begin{frame}{Beamer}
-  \begin{itemize}
-    \item 什么是Beamer？ \\ \url{https://en.wikipedia.org/wiki/Beamer_(LaTeX)}
-    \item 如何使用Beamer？ \\ \url{https://www.overleaf.com/learn/latex/Beamer}
-    \item 在这里可以找到若干Beamer模板 \\ \url{https://www.overleaf.com/gallery}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Why \LaTeX{} ?}
-  \begin{itemize}
-    \item \LaTeX 广泛用于学术界，期刊会议论文模板
-  \end{itemize}
-  \begin{table}[h]
-    \centering
-    \begin{tabular}{c|c}
-      Microsoft\textsuperscript{\textregistered}  Word & \LaTeX      \\
-      \hline
-      文字处理工具                                           & 专业排版软件      \\
-      容易上手，简单直观                                        & 容易上手        \\
-      所见即所得                                            & 所见即所想，所想即所得 \\
-      高级功能不易掌握                                         & 进阶难，但一般用不到  \\
-      处理长文档需要丰富经验                                      & 和短文档处理基本无异  \\
-      花费大量时间调格式                                        & 无需担心格式，专注内容 \\
-      公式排版差强人意                                         & 尤其擅长公式排版    \\
-      二进制格式，兼容性差                                       & 文本文件，易读、稳定  \\
-      付费商业许可                                           & 自由免费使用      \\
-    \end{tabular}
-  \end{table}
-\end{frame}
-
-\subsection*{Related Efforts}
-
-\begin{frame}{Related Efforts}
-  \begin{itemize}
-    \item 样式依据SEU-Beamer-Slide改编，感谢原作者的设计 \\ \url{https://github.com/TouchFishPioneer/SEU-Beamer-Slide}
-    \item NEU-Beamer-Slide提供了校徽矢量图等各种资源文件 \\ \url{https://github.com/zhouyanasd/NEU-Beamer-Slide}
-    \item 内容编排参考THU-Beamer-Theme \\ \url{https://github.com/tuna/THU-Beamer-Theme}
-  \end{itemize}
-\end{frame}
-
-\section{研究内容}
-
-\begin{frame}[fragile]{\LaTeX{} 常用命令}
-  % \begin{exampleblock}{命令}
-  %     \centering
-  %     \footnotesize
-  %     \begin{tabular}{llll}
-  %         \cmd{chapter} & \cmd{section} & \cmd{subsection} & \cmd{paragraph} \\
-  %         章 & 节 & 小节 & 带题头段落 \\\hline
-  %         \cmd{centering} & \cmd{emph} & \cmd{verb} & \cmd{url} \\
-  %         居中对齐 & 强调 & 原样输出 & 超链接 \\\hline
-  %         \cmd{footnote} & \cmd{item} & \cmd{caption} & \cmd{includegraphics} \\
-  %         脚注 & 列表条目 & 标题 & 插入图片 \\\hline
-  %         \cmd{label} & \cmd{cite} & \cmd{ref} \\
-  %         标号 & 引用参考文献 & 引用图表公式等\\\hline
-  %     \end{tabular}
-  % \end{exampleblock}
-  % \begin{exampleblock}{环境}
-  %     \centering
-  %     \footnotesize
-  %     \begin{tabular}{lll}
-  %         \env{table} & \env{figure} & \env{equation}\\
-  %         表格 & 图片 & 公式 \\\hline
-  %         \env{itemize} & \env{enumerate} & \env{description}\\
-  %         无编号列表 & 编号列表 & 描述 \\\hline
-  %     \end{tabular}
-  % \end{exampleblock}
-\end{frame}
-
-\begin{frame}[fragile]{\LaTeX{} 命令举例}
-  %   \begin{minipage}{0.5\linewidth}
-  % \begin{lstlisting}[language=TeX]
-  % \begin{itemize}
-  % \item A \item B
-  % \item C
-  % \begin{itemize}
-  %   \item C-1
-  % \end{itemize}
-  % \end{itemize}
-  % \end{lstlisting}
-  %   \end{minipage}\hspace{1cm}
-  %   \begin{minipage}{0.3\linewidth}
-  %       \begin{itemize}
-  %           \item A
-  %           \item B
-  %           \item C
-  %           \begin{itemize}
-  %               \item C-1
-  %           \end{itemize}
-  %       \end{itemize}
-  %   \end{minipage}
-  %   \medskip
-  %   \begin{minipage}{0.5\linewidth}
-  % \begin{lstlisting}[language=TeX]
-  % \begin{enumerate}
-  % \item 巨佬 \item 大佬
-  % \item 萌新
-  % \begin{itemize}
-  %   \item 瑟瑟发抖
-  % \end{itemize}
-  % \end{enumerate}
-  % \end{lstlisting}
-  %   \end{minipage}\hspace{1cm}
-  %   \begin{minipage}{0.3\linewidth}
-  %       \begin{enumerate}
-  %           \item 巨佬
-  %           \item 大佬
-  %           \item 萌新
-  %           \begin{itemize}
-  %               \item 瑟瑟发抖
-  %           \end{itemize}
-  %       \end{enumerate}
-  %   \end{minipage}
-\end{frame}
-
-\begin{frame}[fragile]{\LaTeX{} 数学公式}
-  %   \begin{columns}
-  %       \begin{column}{.55\textwidth}
-  % \begin{lstlisting}[language=TeX]
-  % $V = \frac{4}{3}\pi r^3$
-
-  % \[
-  % V = \frac{4}{3}\pi r^3
-  % \]
-
-  % \begin{equation}
-  % \label{eq:vsphere}
-  % V = \frac{4}{3}\pi r^3
-  % \end{equation}
-  % \end{lstlisting}
-  %       \end{column}
-  %       \begin{column}{.4\textwidth}
-  %           $V = \frac{4}{3}\pi r^3$
-  %           \[
-  %               V = \frac{4}{3}\pi r^3
-  %           \]
-  %           \begin{equation}
-  %               \label{eq:vsphere}
-  %               V = \frac{4}{3}\pi r^3
-  %           \end{equation}
-  %       \end{column}
-  %   \end{columns}
-  %   \begin{itemize}
-  %       \item 更多内容请看 \href{https://zh.wikipedia.org/wiki/Help:数学公式}{\color{purple}{这里}}
-  %   \end{itemize}
-\end{frame}
-
-\begin{frame}{\LaTeX{} 数学公式举例}
-  % \begin{exampleblock}{无编号公式} % 加 * 
-  %     \begin{equation*}
-  %         J(\theta) = \mathbb{E}_{\pi_\theta}[G_t] = \sum_{s\in\mathcal{S}} d^\pi (s)V^\pi(s)=\sum_{s\in\mathcal{S}} d^\pi(s)\sum_{a\in\mathcal{A}}\pi_\theta(a|s)Q^\pi(s,a)
-  %     \end{equation*}
-  % \end{exampleblock}
-  % \begin{exampleblock}{多行多列公式\footnote{如果公式中有文字出现，请用 $\backslash$mathrm\{\} 或者 $\backslash$text\{\} 包含，不然就会变成 $clip$，在公式里看起来比 $\mathrm{clip}$ 丑非常多。}}
-  %     % 使用 & 分隔
-  %     \begin{align}
-  %         Q_\mathrm{target}&=r+\gamma Q^\pi(s^\prime, \pi_\theta(s^\prime)+\epsilon)\\
-  %         \epsilon&\sim\mathrm{clip}(\mathcal{N}(0, \sigma), -c, c)\nonumber
-  %     \end{align}
-  % \end{exampleblock}
-\end{frame}
-
-% \begin{frame}{续：数学公式举例}
-%   \begin{exampleblock}{编号多行公式}
-%       % Taken from Mathmode.tex
-%       \begin{multline}
-%           A=\lim_{n\rightarrow\infty}\Delta x\left(a^{2}+\left(a^{2}+2a\Delta x+\left(\Delta x\right)^{2}\right)\right.\label{eq:reset}\\
-%           +\left(a^{2}+2\cdot2a\Delta x+2^{2}\left(\Delta x\right)^{2}\right)\\
-%           +\left(a^{2}+2\cdot3a\Delta x+3^{2}\left(\Delta x\right)^{2}\right)\\
-%           +\ldots\\
-%           \left.+\left(a^{2}+2\cdot(n-1)a\Delta x+(n-1)^{2}\left(\Delta x\right)^{2}\right)\right)\\
-%           =\frac{1}{3}\left(b^{3}-a^{3}\right)
-%       \end{multline}
-%   \end{exampleblock}
-% \end{frame}
-
-\begin{frame}{插入图片和表格}
-  % \begin{itemize}
-  %     \item 矢量图 eps, ps, pdf
-  %     \begin{itemize}
-  %         \item METAPOST, pstricks, pgf $\ldots$
-  %         \item Xfig, Dia, Visio, Inkscape $\ldots$
-  %         \item Matlab / Excel 等保存为 pdf
-  %     \end{itemize}
-  %     \item 标量图 png, jpg, tiff $\ldots$
-  %     \begin{itemize}
-  %         \item 提高清晰度，避免发虚
-  %         \item 应尽量避免使用
-  %     \end{itemize}
-  % \end{itemize}
-  % \begin{figure}[htpb]
-  %     \centering
-  %     \includegraphics[width=0.2\linewidth]{assets/neu_logo.png}
-  %     \caption{这个校徽就是矢量图}
-  % \end{figure}
-\end{frame}
-
-\begin{frame}[fragile]{插入参考文献}
-\end{frame}
-
-\section{计划进度}
 \begin{frame}
   \begin{itemize}
-    \item 一月：完成文献调研
-    \item 二月：复现并评测各种Beamer主题美观程度
-    \item 三、四月：美化THU Beamer主题
-    \item 五月：论文撰写
+    \item 经典论文回顾
+    \footnote{Krizhevsky, A., Sutskever, I., \& Hinton, G. E.. Imagenet classification with deep convolutional neural networks. 2012. NIPS.}
+    \footnote{He, K., Zhang, X., Ren, S., \& Sun, J.. Deep residual learning for image recognition. 2016. CVPR.}
+    \footnote{Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... \& Polosukhin, I.. Attention is all you need. 2017. NIPS.}
+    
+    \item 电池机理相关
+    \footnote{Yihuan, L., Kang, L., \& James, Y. U.. Estimation approaches for states of charge and health of lithium-ion battery. 2021. Power Generation Technology.}
+    \footnote{Bockrath, S., \& Pruckner, M.. Generalized State of Health Estimation Approach based on Neural Networks for Various Lithium-Ion Battery Chemistries. 2023. ACM e-Energy.}
+    \footnote{Zhu, J., Wang, Y., Huang, Y., Bhushan Gopaluni, R., Cao, Y., Heere, M., ... \& Ehrenberg, H.. Data-driven capacity estimation of commercial lithium-ion batteries from voltage relaxation. 2022. Nature communications.}
+    \footnote{Jia, X., Zhang, C., Li, Y., Zou, C., \& Cai, X.. Knee-Point-Conscious Battery Aging Trajectory Prediction Based on Physics-Guided Machine Learning. 2023. TTE.}
+    \footnote{Attia, P. M., Grover, A., Jin, N., Severson, K. A., Markov, T. M., Liao, Y. H., ... \& Chueh, W. C.. Closed-loop optimization of fast-charging protocols for batteries with machine learning. 2020. Nature.}
+
+    \item 迁移学习相关
+    \footnote{Shen, L., Li, J., Meng, L., Zhu, L., \& Shen, H. T.. Transfer Learning-based State of Charge and State of Health Estimation for Li-ion Batteries: A Review. 2023. TTE.}
+    \footnote{Yihuan Li, Kang Li, Xuan Liu, Yanxia Wang, \& Li Zhang. Lithium-ion battery capacity estimation—a pruned convolutional neural network approach assisted with transfer learning. 2021. Applied Energy.}
+    \footnote{Wang, F., Zhao, Z., Zhai, Z., Guo, Y., Xi, H., Wang, S., \& Chen, X.. Feature disentanglement and tendency retainment with domain adaptation for Lithium-ion battery capacity estimation. 2023. Reliability Engineering \& System Safety.}
+    \footnote{翟智, 王福金, 邸一, 马珮羽, 赵志斌, \& 陈雪峰.. 基于分层对齐迁移学习的锂离子电池容量估计. 2023. 储能科学与技术.}
+    
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item 贝叶斯深度学习相关
+    \footnote{Damianou, A., \& Lawrence, N. D.. Deep gaussian processes. 2013. AISTATS.}
+    \footnote{Kendall, A., \& Gal, Y.. What uncertainties do we need in bayesian deep learning for computer vision?. 2017. NIPS.}
+    \footnote{Gal, Y., \& Ghahramani, Z.. Dropout as a bayesian approximation: Representing model uncertainty in deep learning. 2016. ICML.}
+    \footnote{Gal, Y., Hron, J., \& Kendall, A.. Concrete dropout. 2017. NIPS.}
+    \footnote{Jospin, L. V., Laga, H., Boussaid, F., Buntine, W., \& Bennamoun, M.. Hands-on Bayesian neural networks—A tutorial for deep learning users. 2022. CIM.}
+    \footnote{Lin, Y. H., \& Li, G. H.. A Bayesian deep learning framework for RUL prediction incorporating uncertainty quantification and calibration. 2022. TII.}
+    \item 图神经网络相关
+    \footnote{Li, T., Zhou, Z., Li, S., Sun, C., Yan, R., \& Chen, X.. The emerging graph neural networks for intelligent fault diagnostics and prognostics: A guideline and a benchmark study. 2022. MSSP.}
+    \footnote{Wang, Y., Xu, Y., Yang, J., Wu, M., Li, X., Xie, L., \& Chen, Z.. Fully-Connected Spatial-Temporal Graph for Multivariate Time Series Data. 2023. AAAI.}
+    \item 深度学习中的难例（hard sample）相关
+    \footnote{Jia, Y., Gao, J., Huang, W., Yuan, Y., \& Wang, Q.. Exploring Hard Samples in Multi-View for Few-Shot Remote Sensing Scene Classification. 2023. TRGS.}
+    \footnote{Cui, P., Zhang, D., Deng, Z., Dong, Y., \& Zhu, J.. Learning Sample Difficulty from Pre-trained Models for Reliable Prediction. 2023. arXiv.}
   \end{itemize}
 \end{frame}
 
-\section*{参考文献}
+\section{代码实现}
+
 \begin{frame}
+  \begin{itemize}
+    \item （Dataset，DataLoader）锂离子电池数据集整理与数据预处理 \\ \href{https://github.com/hilinxinhui/lib_ds_toolkits}{https://github.com/hilinxinhui/lib\_ds\_toolkits}
+    \item （RUL）自回归-卷积神经网络-长短期神经网络（ST dependencies）框架 \\ \href{https://github.com/hilinxinhui/auto-cnn-lstm}{https://github.com/hilinxinhui/auto-cnn-lstm}
+    \item （SOH）时序-传感器（ST dependencies）双分支Transformer框架 \\ \href{https://github.com/hilinxinhui/dast.git}{https://github.com/hilinxinhui/dast.git}
+    \item （RUL，工况）基于Transformer的多任务框架 \\ \href{https://github.com/hilinxinhui/multi_task_lib/tree/main}{https://github.com/hilinxinhui/multi\_task\_lib/tree/main}
+    \item （RUL，工况）基于Transformer的多任务框架（改进位置编码，引入贝叶斯方法修正任务损失函数系数） \\ \href{https://github.com/hilinxinhui/multi_task_lib/tree/dev}{https://github.com/hilinxinhui/multi\_task\_lib/tree/dev}
+    \item （SOH）层次迁移学习-通道注意力框架 \\ \href{https://github.com/hilinxinhui/tl_lib_phm.git}{https://github.com/hilinxinhui/tl\_lib\_phm.git}
+    \item （SOH）全连接图神经网络（FCGNN for DEDT）框架 \\ \href{https://github.com/hilinxinhui/gnn_lib_phm}{https://github.com/hilinxinhui/gnn\_lib\_phm}
+  \end{itemize}
 \end{frame}
 
-\section*{}
+\section{未来工作}
+
 \begin{frame}
-  \begin{center}
-    {\Huge\calligra Thanks!}
-  \end{center}
+\begin{itemize}
+  \item 贝叶斯深度学习 \\ 模型估计/预测结果的不确定性估计、模型幻觉、硬样本/难例判定
+  \item 迁移学习 \\ 多工况混合情形的迁移学习、图迁移学习
+  \item 模型压缩 \\ 知识蒸馏、agent注意力机制、全连接图神经网络“剪枝”
+  \item 电池组健康状态估计和剩余寿命预测 \\ 电池组数据集缺乏、电池组健康状态/剩余寿命定义模糊
+  \item 电池荷电状态估计（SOC）、电化学阻抗谱（EIS）预测和健康状态-荷电状态联合估计框架
+  \item ......
+\end{itemize}
 \end{frame}
 
 \end{document}
